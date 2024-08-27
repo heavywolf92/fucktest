@@ -3,249 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FutureCoin - The Currency of Tomorrow</title>
+    <title>MEMEMEMEME Landing Page</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-        * {
+        body, html {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 30px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #4caf50;
-        }
-
-        .hero {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
             height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
             overflow: hidden;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
+        .background-image {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://source.unsplash.com/random/1920x1080?cryptocurrency') no-repeat center center/cover;
-            opacity: 0.3;
-            z-index: -1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            z-index: 0;
         }
-
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease;
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 2;
         }
-
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease 0.5s both;
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
         }
-
-        .btn {
-            display: inline-block;
-            background-color: #4caf50;
-            color: #fff;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
+        .nav-icon:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 72px;
             font-weight: bold;
-            transition: background-color 0.3s ease;
-            animation: fadeInUp 1s ease 1s both;
+            margin-bottom: 40px;
+            line-height: 1.2;
         }
-
-        .btn:hover {
-            background-color: #45a049;
+        .telegram-logo {
+            width: 60px;
+            height: 60px;
+            transition: all 0.3s ease;
         }
-
-        .features {
-            padding: 100px 0;
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-item {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-item i {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #4caf50;
-        }
-
-        .feature-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
+        .telegram-logo:hover {
+            transform: scale(1.1);
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">FutureCoin</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>FutureCoin</h1>
-                <p>The revolutionary cryptocurrency shaping tomorrow's economy</p>
-                <a href="#" class="btn">Get Started</a>
-            </div>
-        </section>
-
-        <section id="features" class="features">
-            <div class="container">
-                <h2>Why Choose FutureCoin?</h2>
-                <div class="feature-grid">
-                    <div class="feature-item">
-                        <i class="fas fa-lock"></i>
-                        <h3>Secure</h3>
-                        <p>Advanced encryption and blockchain technology ensure your transactions are safe and private.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-bolt"></i>
-                        <h3>Fast</h3>
-                        <p>Lightning-fast transactions processed in seconds, not minutes or hours.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-globe"></i>
-                        <h3>Global</h3>
-                        <p>Send and receive money anywhere in the world without borders or restrictions.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Profitable</h3>
-                        <p>Strong growth potential and innovative staking rewards for holders.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-        });
-    </script>
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tiktok.com%2F%40yadro.greenscreen%2Fvideo%2F7310588001527074053&psig=AOvVaw2iGDgWfxpAPU9PzM_p7Nwq&ust=1724852368947000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjMj_ellYgDFQAAAAAdAAAAABAE" alt="Black cat background" class="background-image">
+    <nav class="top-nav">
+        <a href="#" aria-label="Twitter">
+            <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+        </a>
+        <a href="#" aria-label="Telegram">
+            <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            </svg>
+        </a>
+        <a href="#" aria-label="Sunpump Chart">
+            <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M3 3v18h18v-2H5V3H3zm4 3h2v10H7V6zm4 2h2v8h-2V8zm4 2h2v6h-2v-6z"/>
+            </svg>
+        </a>
+    </nav>
+    <div class="container">
+        <h1>MEMEMEMEME</h1>
+        <a href="#" aria-label="Telegram">
+            <svg class="telegram-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            </svg>
+        </a>
+    </div>
 </body>
 </html>
