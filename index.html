@@ -8,21 +8,35 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #000000;
             color: #ffffff;
             height: 100vh;
             overflow: hidden;
         }
-        .background-image {
+        .background-wrapper {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            z-index: 0;
+        }
+        .background-image {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             opacity: 0.3;
-            z-index: 0;
+            filter: blur(5px);
+            transition: all 0.5s ease;
+        }
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
         }
         .top-nav {
             position: fixed;
@@ -34,15 +48,18 @@
             padding: 20px;
             box-sizing: border-box;
             z-index: 2;
+            background-color: rgba(0, 0, 0, 0.5);
         }
         .nav-icon {
             width: 24px;
             height: 24px;
-            margin: 0 10px;
+            margin: 0 15px;
             transition: all 0.3s ease;
+            opacity: 0.7;
         }
         .nav-icon:hover {
             transform: scale(1.1);
+            opacity: 1;
         }
         .container {
             position: relative;
@@ -55,24 +72,35 @@
             text-align: center;
         }
         h1 {
-            font-size: 72px;
+            font-size: 84px;
             font-weight: bold;
             margin-bottom: 40px;
             line-height: 1.2;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 5px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         .telegram-logo {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             transition: all 0.3s ease;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
         }
         .telegram-logo:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(360deg);
         }
     </style>
 </head>
 <body>
-    <img src="https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?auto=compress&fm=pjpg" alt="Polite cat background" class="background-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/1920x1080?text=Cat+Image+Not+Found';">
+    <div class="background-wrapper">
+        <img src="https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?auto=compress&fm=pjpg" alt="Polite cat background" class="background-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/1920x1080?text=Cat+Image+Not+Found';">
+        <div class="background-overlay"></div>
+    </div>
     <nav class="top-nav">
         <a href="#" aria-label="Twitter">
             <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
